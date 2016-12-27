@@ -13,9 +13,11 @@ class Patient
 
   def payment
   	puts "Enter consultation fee: "
-  	@consult = gets.chomp
+  	@cons = gets.chomp
+    @consult = @cons.to_i
   	puts "Enter medication charges: "
-  	@med = gets.chomp
+  	@medic = gets.chomp
+    @med = @medic.to_i
   end
 
   def calculate_total
@@ -31,7 +33,8 @@ class InPatient < Patient
   def payment
     super
     puts "Enter accomodation charges: "
-    @accom = gets.chomp
+    @accomod = gets.chomp
+    @accom = @accomod.to_i
   end
 
   def calculate_total
